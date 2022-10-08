@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SpaceX Clone</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="module" defer src="js/navigation.js"></script>
+		<script type="module" src="js/swiper.js"></script>
+	</head>
+	<body class="bg-neutral-900 overflow-x-hidden">
+		<header id="header" class="fixed text-white bg-gradient-to-b from-neutral-900 to-none top-0 left-0 right-0 transition-all z-20">
+			<div class="container mx-auto py-2 px-4 flex flex-row justify-between gap-6 items-center transition-alls-center">
+				<div class="left-menu flex flex-row gap-6 item transition-alls-center">
+					<div class="netflix-logo">
+						<img class="w-20 h-16" src="img/netflix.svg" alt="Netflix Logo" />
+					</div>
+					<div class="group flex">
+						<div class="openMenu flex item items-center transition-alls-center gap-2 lg:hidden">
+							<span class="inline-block">Browse</span>
+							<span class="inline-block">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+								</svg>
+							</span>
+						</div>
+						<div
+							id="navigation"
+							class="rounded-lg nav flex-col lg:flex-row gap-4 lg:gap-6 py-4 item transition-alls-center absolute lg:static top-12 left-4 px-28 lg:px-4 bg-neutral-900 lg:bg-transparent border-t-2 lg:border-0 hidden lg:flex group-hover:flex">
+							<a class="hover:bg-neutral-800" href="">TV Shows</a>
+							<a href="">Movies</a>
+							<a href="">New And Popular</a>
+							<a href="">My List</a>
+							<a href="">Browse by Languages</a>
+						</div>
+					</div>
+				</div>
+				<div class="right-menu flex flex-1 item transition-alls-center gap-6 justify-end relative">
+					<div class="search group flex flex-row item transition-alls-center gap-4">
+						<div class="search-box">
+							<input class="rounded-lg w-0 bg-black group-hover:border-2 group-hover:p-2 group-hover:w-full" type="text" placeholder="Search" />
+						</div>
+						<div class="search-icon cursor-pointer">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+							</svg>
+						</div>
+					</div>
+					<div class="notification group">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+						</svg>
+						<div class="rounded-lg group-hover:block hidden absolute w-6/6 lg:w-5/6 right-0 top-8 p-2 group-hover:flex group-hover:flex-col divide-y-2 divide-neutral-700 bg-neutral-900">
+							<div class="item transition-all flex flex-row gap-4 py-2">
+								<img class="w-1/3 object-cover" src="img/bell-notification-item.jpg" alt="" />
+								<div class="info">
+									<div class="title">
+										<h1 class="text-lg">Reminder: Somethings gonna happen sometimes.</h1>
+									</div>
+
+									<div class="date">
+										<p class="text-sm text-neutral-300">Two Weeks Ago</p>
+									</div>
+								</div>
+							</div>
+							<div class="item transition-all flex flex-row gap-4 py-2">
+								<img class="w-1/3 object-cover" src="img/bell-notification-item-2.jpg" alt="" />
+								<div class="info">
+									<div class="title">
+										<h1 class="text-lg">Reminder: Somethings gonna happen sometimes.</h1>
+									</div>
+
+									<div class="date">
+										<p class="text-sm text-neutral-300">Two Weeks Ago</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="group flex item transition-alls-center gap-2 cursor-pointer">
+						<img class="aspect-square object-cover h-10 rounded-md" src="img/profile-picture.jpg" alt="" />
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="group-hover:rotate-180 w-6 h-6 transition-all">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+						</svg>
+
+						<div class="hidden cursor-pointer group-hover:flex absolute flex flex-col p-4 top-10 right-0 w-64 bg-neutral-900 text-xl gap-4 rounded-lg">
+							<div class="flex flex-row gap-3 item transition-alls-center">
+								<img class="aspect-square object-cover h-12 rounded-md" src="img/profile-picture.jpg" alt="" />
+								<h1>Jón Jónsson</h1>
+							</div>
+							<div class="flex flex-row gap-3 item transition-alls-center">
+								<img class="aspect-square object-cover h-12 rounded-md" src="img/profile-picture-2.jpg" alt="" />
+								<h1>Helgi Helgason</h1>
+							</div>
+							<div class="flex flex-row gap-3 item transition-alls-center">
+								<svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+									<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+								<h1>Manage Profiles</h1>
+							</div>
+							<div class="flex flex-row gap-3 item transition-alls-center">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+
+								<h1>Account</h1>
+							</div>
+							<div class="flex flex-row gap-3 item transition-alls-center border-t border-neutral-600 pt-3">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+								</svg>
+
+								<h1>Log Out</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="h-[560px] lg:h-[640px] w-full flex bg-center bg-no-repeat bg-cover bg-[url('/img/stranger-things.jpg')] relative">
+			<div class="overlay absolute top-0 left-0 right-0 -bottom-1 bg-gradient-to-b from-neutral-50/5 to-neutral-900"></div>
+			<div class="container mx-auto flex flex-col justify-end item transition-alls-start gap-24 pb-12">
+				<div class="wrapper max-w-[18rem] lg:max-w-lg flex flex-col gap-4 px-4 z-10">
+					<img class="w-full h-auto" src="img/stranger-things-logo-2.png" alt="" />
+					<p class="text-white w-fit text-lg lg:text-xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur reprehenderit deleniti unde excepturi!</p>
+					<div class="info flex flex-row gap-2">
+						<a class="text-xl flex flex-row items-center transition-alls-center gap-2 font-bold bg-white py-2 lg:py-4 px-4 lg:px-8 rounded-lg" href="">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+								<path
+									fill-rule="evenodd"
+									d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+									clip-rule="evenodd" />
+							</svg>
+							Play</a
+						><a class="text-xl flex flex-row items-center transition-alls-center gap-3 font-bold bg-neutral-800 bg-opacity-75 text-white py-2 px-4 rounded-lg w-fit" href="">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+							</svg>
+
+							More Info</a
+						>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div class="overflow-x-hidden container mx-auto">
+			<h1 class="text-white text-2xl px-4 font-semibold">Popular on Netflix</h1>
+			<div class="swiper-container mb-12 mt-6 relative">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/c3XBgBLzB9Sh7k7ewXY2QpfH47L.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/b5rOkbQ0jKYvBqBf3bwJ6nXBOtx.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/aNsrgElf0fiKBSR8cWWEL6XUTte.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/dueiWzWc81UAgnbDAyH4Gjqnh4n.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/hwNRc9ZWrakGdql22srY7DqtmRQ.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/trAOGwksvgHYNpbK4GewbjYQ1pi.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/zAIippNnm6o0gYEtjapbjQSxP8G.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/tNyJxHK3m7NAAKNYITLJ5oxS0YR.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/hMh1mR2kNl8kHjpIuPh4TICTwjo.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/c4EkF5JAZ83bUqNErhuSd9xw6uJ.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/79DgItjsyH5tpA3mC2xv5gU2zlZ.jpg" alt="" />
+					</div>
+				</div>
+
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+		<div class="overflow-x-hidden container mx-auto">
+			<h1 class="text-white text-2xl px-4 font-semibold">Continue Watching For {user}</h1>
+			<div class="swiper-container mb-12 mt-6 relative">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/c3XBgBLzB9Sh7k7ewXY2QpfH47L.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/b5rOkbQ0jKYvBqBf3bwJ6nXBOtx.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/aNsrgElf0fiKBSR8cWWEL6XUTte.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/dueiWzWc81UAgnbDAyH4Gjqnh4n.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/hwNRc9ZWrakGdql22srY7DqtmRQ.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/trAOGwksvgHYNpbK4GewbjYQ1pi.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/zAIippNnm6o0gYEtjapbjQSxP8G.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/tNyJxHK3m7NAAKNYITLJ5oxS0YR.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/hMh1mR2kNl8kHjpIuPh4TICTwjo.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/c4EkF5JAZ83bUqNErhuSd9xw6uJ.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/79DgItjsyH5tpA3mC2xv5gU2zlZ.jpg" alt="" />
+					</div>
+				</div>
+
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+		<div class="overflow-x-hidden container mx-auto">
+			<h1 class="text-white text-2xl px-4 font-semibold">Trending Now</h1>
+			<div class="swiper-container mb-12 mt-6 relative">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/c3XBgBLzB9Sh7k7ewXY2QpfH47L.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/b5rOkbQ0jKYvBqBf3bwJ6nXBOtx.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/aNsrgElf0fiKBSR8cWWEL6XUTte.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/dueiWzWc81UAgnbDAyH4Gjqnh4n.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/hwNRc9ZWrakGdql22srY7DqtmRQ.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/trAOGwksvgHYNpbK4GewbjYQ1pi.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/zAIippNnm6o0gYEtjapbjQSxP8G.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/tNyJxHK3m7NAAKNYITLJ5oxS0YR.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/hMh1mR2kNl8kHjpIuPh4TICTwjo.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/c4EkF5JAZ83bUqNErhuSd9xw6uJ.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/79DgItjsyH5tpA3mC2xv5gU2zlZ.jpg" alt="" />
+					</div>
+				</div>
+
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+		<div class="overflow-x-hidden container mx-auto">
+			<h1 class="text-white text-2xl px-4 font-semibold">Et cetera</h1>
+			<div class="swiper-container mb-12 mt-6 relative">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/ba7hnMx1HAze0QSJSNfsTBycS8U.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/c3XBgBLzB9Sh7k7ewXY2QpfH47L.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/b5rOkbQ0jKYvBqBf3bwJ6nXBOtx.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/aNsrgElf0fiKBSR8cWWEL6XUTte.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/dueiWzWc81UAgnbDAyH4Gjqnh4n.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/hwNRc9ZWrakGdql22srY7DqtmRQ.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/trAOGwksvgHYNpbK4GewbjYQ1pi.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/zAIippNnm6o0gYEtjapbjQSxP8G.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/tNyJxHK3m7NAAKNYITLJ5oxS0YR.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/hMh1mR2kNl8kHjpIuPh4TICTwjo.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/c4EkF5JAZ83bUqNErhuSd9xw6uJ.jpg" alt="" />
+					</div>
+					<div class="swiper-slide hover:scale-150 hover:z-10 transition-all">
+						<img class="rounded-md cursor-grab transition-all" src="https://image.tmdb.org/t/p/w500/79DgItjsyH5tpA3mC2xv5gU2zlZ.jpg" alt="" />
+					</div>
+				</div>
+
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+		<footer>
+			<div class="bg-neutral-900 text-white pt-12 pb-6">
+				<div class="container mx-auto px-4">
+					<div class="flex flex-wrap">
+						<div class="w-full md:w-1/2 lg:w-1/4">
+							<h1 class="text-xl font-semibold mb-4">About</h1>
+							<p class="text-gray-400">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tempora placeat autem et commodi, provident laudantium perferendis quasi in totam dicta laborum
+								voluptatem numquam at, doloribus exercitationem quas nulla error.
+							</p>
+						</div>
+						<div class="w-full md:w-1/2 lg:w-1/4">
+							<h1 class="text-xl font-semibold mb-4">Links</h1>
+							<ul class="text-gray-400">
+								<li class="mb-2"><a href="#">Home</a></li>
+								<li class="mb-2"><a href="#">Movies</a></li>
+								<li class="mb-2"><a href="#">TV Shows</a></li>
+								<li class="mb-2"><a href="#">Actors</a></li>
+							</ul>
+						</div>
+						<div class="w-full md:w-1/2 lg:w-1/4">
+							<h1 class="text-xl font-semibold mb-4">Social</h1>
+							<ul class="text-gray-400">
+								<li class="mb-2"><a href="#">Facebook</a></li>
+								<li class="mb-2"><a href="#">Twitter</a></li>
+								<li class="mb-2"><a href="#">Instagram</a></li>
+								<li class="mb-2"><a href="#">YouTube</a></li>
+							</ul>
+						</div>
+						<div class="w-full md:w-1/2 lg:w-1/4">
+							<h1 class="text-xl font-semibold mb-4">Newsletter</h1>
+							<p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+							<div class="mt-4">
+								<input type="text" class="bg-gray-800 text-white rounded-md px-4 py-2 w-full" placeholder="Email Address" />
+								<button class="bg-red-600 text-white rounded-md px-4 py-2 w-full mt-2">Subscribe</button>
+							</div>
+						</div>
+					</div>
+					<p class="text-gray-500">code by elvarp.is</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<!-- 		<aside id="sideNav" class="sideNav -translate-x-full bg-neutral-900 absolute top-16 bottom-0 left-0 transition-all">
+			<div class="profile text-neutral-300 border-b border-neutral-500 px-4 pb-4">
+				<div class="profile-wrapper flex flex-row item transition-alls-center">
+					<div class="profile-picture">
+						<img class="aspect-square object-cover h-12" src="img/profile-picture.jpg" alt="" />
+					</div>
+					<div class="profile-name flex flex-col p-4">
+						<a class="" href="">Jón Jónsson</a>
+						<a class="font-light" href="">Switch Profiles</a>
+					</div>
+				</div>
+				<div class="profile-settings flex flex-col font-medium">
+					<a class="" href="">Account</a>
+					<a class="" href="">Help Center</a>
+					<a class="" href="">Sign Out of Netflix</a>
+				</div>
+			</div>
+			<ul class="menu text-neutral-300 font-medium flex flex-col border-t-8 gap-1 px-4 pt-4">
+				<li><a href="">Home</a></li>
+				<li></li><a href="">My List</a></li>
+				<li></li><a href="">Thrillers</a></li>
+				<li></li><a href="">Crime</a></li>
+			</div>
+		</aside> -->
